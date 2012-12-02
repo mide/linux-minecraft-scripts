@@ -12,14 +12,7 @@
 # (Note -NO- trailing slashes on paths)    #
 ############################################
 
-# Where is Minecraft?
-minecraftDir="/home/user/minecraft"
-
-# Where do you want to store the temporary files?
-tempDir="/home/user/temp-minecraft"
-
-# How long (in minutes) should this mode last?
-min=10
+source config.cfg
 
 ############################################
 # End of settings; Do not modify below     #
