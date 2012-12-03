@@ -10,6 +10,7 @@ until [ "${option}" = "exit" ]; do
 
 	echo
 	echo " Command 		- 	Function"
+	echo " Install - install right premissions and configs"
 	echo " Auth	- view all authentications to the server"
 	echo " Backup - Makes a backup of your server"
 	echo " Chat	- view live chatlog of players"
@@ -25,8 +26,9 @@ until [ "${option}" = "exit" ]; do
 	read -p "	Option:  " option var1
 	
 	
-	
-	if [ "${option,,}" = "auth" ]; then
+	if [ "${option,,}" = "install" ]; then
+		sh install.sh
+	elif [ "${option,,}" = "auth" ]; then
 		./mc-auth.sh
 	elif [ "${option,,}" = "backup" ]; then
 		clear
