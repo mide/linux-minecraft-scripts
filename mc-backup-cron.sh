@@ -17,7 +17,7 @@ source ./config.cfg
 ############################################
 
 # We need to first put the server in readonly mode to reduce the chance of backing up half of a chunk. 
-screen -p 0 -S minecraft -X eval "stuff \"say Another hour has passed, time for a backup..\"\015"
+screen -p 0 -S minecraft -X eval "stuff \"say "$backupTime" hour has passed, time for a backup..\"\015"
 screen -p 0 -S minecraft -X eval "stuff \"say "$serverNick" backup system starting up.\"\015"
 screen -p 0 -S minecraft -X eval "stuff \"save-off\"\015"
 screen -p 0 -S minecraft -X eval "stuff \"save-all\"\015"
