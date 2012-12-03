@@ -9,7 +9,14 @@
 # (Note -NO- trailing slashes on paths)    #
 ############################################
 
-source ./config.cfg
+# Where do you wish to store the backups
+backupDir="/home/user/backups"
+
+# Where are the files you wish to backup? The script will backup everything in this directory.
+minecraftDir="/home/user/minecraft"
+
+# Do you have more than one server? What do you want to call this one?
+serverNick="minecraft" 
 
 ############################################
 # End of settings; Do not modify below     #
