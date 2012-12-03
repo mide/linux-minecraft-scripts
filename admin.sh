@@ -45,7 +45,7 @@ until [ "${option}" = "exit" ]; do
 	elif [ "${option,,}" = "restart" ]; then
 		clear
 		./mc-restart.sh
-	elif [ "${option,,}" = "ctop" ]; then
+	elif [ "${option,,}" = "stop" ]; then
 		clear
 		./mc-stop.sh
 	elif [ "${option,,}" = "creative" ]; then
