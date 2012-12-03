@@ -63,9 +63,6 @@ sleep 1
 echo " Making mc-backup.sh executable"
 chmod +x ./mc-backup.sh
 sleep 1
-echo " Making mc-backup-cron.sh executable"
-chmod +x ./mc-backup-cron.sh
-sleep 1
 echo " Making mc-chat.sh executable"
 chmod +x ./mc-chat.sh
 sleep 1
