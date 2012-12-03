@@ -46,8 +46,8 @@ read -p " Give a temp dir location (directory containing, no trailing slash):
 # Where do you want to store the temporary files? (directory containing, no trailing slash)
 tempDir=$tempDir" >> ./config.cfg
 
-#Making The Minecraft tempDir Config
-read -p " Where is your minecraft log file: 
+#Making The Minecraft log Config
+read -p " Where is your minecraft log file:
  " log
 	echo "
 # Where is your Minecraft Log?
