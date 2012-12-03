@@ -17,41 +17,41 @@ read -p " Give your minecraft dir path (directory containing, no trailing slash)
  " minecraftDir
 echo "
 # Location of the minecraft_server.jar (directory containing, no trailing slash)
-minecraftDir=$minecraftDir" >> ./config.cfg
+minecraftDir=\"$minecraftDir"\" >> ./config.cfg
 
 #Making The Minecraft Backup DIR Config
 read -p " Give your backup dir path (directory containing, no trailing slash): 
  " backupDir
 	echo "
 # Where do you wish to store the backups (directory containing, no trailing slash)
-backupDir=$backupDir" >> ./config.cfg
+backupDir=\"$backupDir"\" >> ./config.cfg
 
 #Making The Minecraft Jar Config
 read -p " Give your server jar name (default minecraft_server): 
  " minecraftJar
 	echo "
 #The jar u want to load in default (minecraft_server) or (minecraftforge-universal)
-jar=$minecraftJar" >> ./config.cfg
+jar=\"$minecraftJar"\" >> ./config.cfg
 
 #Making The Minecraft serverNick Config
 read -p " Give your server name: " serverNick
 	echo "
 # Do you have more than one server? What do you want to call this one?
-serverNick=$serverNick" >> ./config.cfg
+serverNick=\"$serverNick"\" >> ./config.cfg
 
 #Making The Minecraft tempDir Config
 read -p " Give a temp dir location (directory containing, no trailing slash): 
  " tempDir
 	echo "
 # Where do you want to store the temporary files? (directory containing, no trailing slash)
-tempDir=$tempDir" >> ./config.cfg
+tempDir=\"$tempDir"\" >> ./config.cfg
 
 #Making The Minecraft log Config
 read -p " Where is your minecraft log file:
  " log
 	echo "
 # Where is your Minecraft Log?
-log=$log" >> ./config.cfg
+log=\"$log"\" >> ./config.cfg
 
 # Make All Files Executable
 echo " Making admin.sh executable"
