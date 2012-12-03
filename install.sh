@@ -93,4 +93,5 @@ sleep 1
 echo " Making mc-temp-creative.sh executable"
 chmod +x ./mc-time.sh
 sleep 1
-read -p " Install script is done press enter to return." dummy
+read -p " Install script is done press enter to return to admin panel." dummy
+./admin.sh
