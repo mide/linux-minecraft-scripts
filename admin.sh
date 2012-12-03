@@ -26,29 +26,29 @@ until [ "${option}" = "exit" ]; do
 	
 	
 	
-	if [ "${option}" = "Auth" ] || [ "${option}" = "auth" ]; then
+	if [ "${option,,}" = "auth" ]; then
 		./mc-auth.sh
-	elif [ "${option}" = "Backup" ] || [ "${option}" = "backup" ]; then
+	elif [ "${option}" = "backup" ]; then
 		clear
 		./mc-backup.sh
-	elif [ "${option}" = "Chat" ] || [ "${option}" = "chat" ]; then
+	elif [ "${option,,}" = "chat" ]; then
 		clear
 		./mc-chat.sh
-	elif [ "${option}" = "Players" ] || [ "${option}" = "players" ]; then
+	elif [ "${option,,}" = "players" ]; then
 		clear
 		./mc-list-all-players.sh
-	elif [ "${option}" = "Start" ] || [ "${option}" = "start" ]; then
+	elif [ "${option,,}" = "start" ]; then
 		clear
 		./mc-start.sh
-	elif [ "${option}" = "Restart" ] || [ "${option}" = "restart" ]; then
+	elif [ "${option,,}" = "restart" ]; then
 		clear
 		./mc-restart.sh
-	elif [ "${option}" = "Stop" ] || [ "${option}" = "stop" ]; then
+	elif [ "${option,,}" = "ctop" ]; then
 		clear
 		./mc-stop.sh
-	elif [ "${option}" = "Creative" ] || [ "${option}" = "creative" ]; then
+	elif [ "${option,,}" = "creative" ]; then
 		./mc-temp-creative.sh ${var1}
-	elif [ "${option}" = "Time" ]; then
+	elif [ "${option,,}" = "Time" ]; then
 		clear
 		./mc-time.sh ${var1}
 	fi
