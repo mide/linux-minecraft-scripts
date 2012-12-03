@@ -35,9 +35,9 @@ screen -p 0 -S minecraft -X eval "stuff \"say "$serverNick" will be restarting i
 # Wait a moment and stop the server.
 sleep 1
 echo "Stopping "$serverNick"."
-./mc-stop
+./mc-stop.sh
 sleep 10
-./mc-start
+./mc-start.sh
 
 sleep 5
 
