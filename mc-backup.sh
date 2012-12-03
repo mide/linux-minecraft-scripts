@@ -46,3 +46,5 @@ screen -p 0 -S minecraft -X eval "stuff \"say "$serverNick" backup system has be
 
 # (Optionally) Remove all old (older than 3 days) backups to cut down on disk utilization. 
 find $backupDir* -mtime +3 -exec rm {} -fv \;
+
+echo "Backup made on $DATE" >> ./backups.txt
