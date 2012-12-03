@@ -1,13 +1,13 @@
 #!/bin/bash
-
-source config.cfg
+clear
 
 # Minecraft Script To List All Players
 # Author: Remko de Bruin <altogoten@gmail.com> 
 # Github: https://github.com/Goten87/linux-minecraft-scripts
 
-clear
+
 until [ "${option}" = "exit" ]; do
+
 	echo
 	echo " Command 		- 	Function"
 	echo " Auth	- view all authentications to the server"
