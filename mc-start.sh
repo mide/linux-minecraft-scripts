@@ -5,7 +5,7 @@
 # Github: https://github.com/cranstonide/linux-minecraft-scripts
 
 
-source config.cfg
+source ./config.cfg
 
 # Move into the minecraft directory.
 cd $minecraftDir
