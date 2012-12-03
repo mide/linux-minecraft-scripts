@@ -4,8 +4,7 @@
 # Author: Mark Ide <cranstonide@gmail.com> 
 # Github: https://github.com/cranstonide/linux-minecraft-scripts
 
-# Where is your Minecraft Log?
-log="/home/user/minecraft/server.log"
+source ./config.cfg
 
 # How far back do you want to start? (In lines)
 # A bigger number may cause your screen to flash.
