@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source ./config.cfg 
-
 # Minecraft Backup Script                  
 # Author: Mark Ide <cranstonide@gmail.com> 
 # Github: https://github.com/cranstonide/linux-minecraft-scripts
@@ -11,13 +9,23 @@ source ./config.cfg
 # (Note -NO- trailing slashes on paths)    #
 ############################################
 
+source ./config.cfg
+
+# Where do you wish to store the backups
+#backupDir="/home/user/backups"
+
+# Where are the files you wish to backup? The script will backup everything in this directory.
+#minecraftDir="/home/user/minecraft"
+
+# Do you have more than one server? What do you want to call this one?
+#serverNick="minecraft" 
 
 ############################################
 # End of settings; Do not modify below     #
 ############################################
 
 # We need to first put the server in readonly mode to reduce the chance of backing up half of a chunk. 
-screen -p 0 -S minecraft -X eval "stuff \"say "$backupTime" hour has passed, time for a backup..\"\015"
+screen -p 0 -S minecraft -X eval "stuff \"say Another hour has passed, time for a backup..\"\015"
 screen -p 0 -S minecraft -X eval "stuff \"say "$serverNick" backup system starting up.\"\015"
 screen -p 0 -S minecraft -X eval "stuff \"save-off\"\015"
 screen -p 0 -S minecraft -X eval "stuff \"save-all\"\015"
