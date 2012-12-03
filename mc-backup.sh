@@ -16,9 +16,8 @@ source ./config.cfg
 # End of settings; Do not modify below     #
 ############################################
 
-# We need to first put the server in readonly mode to reduce the chance of backing up half of a chunk. 
-screen -p 0 -S minecraft -X eval "stuff \"say Another hour has passed, time for a backup..\"\015"
-screen -p 0 -S minecraft -X eval "stuff \"say Starting GotenCraft Backup.\"\015"
+# We need to first put the server in readonly mode to reduce the chance of backing up half of a chunk.
+screen -p 0 -S minecraft -X eval "stuff \"say "$serverNick" backup system starting up.\"\015"
 screen -p 0 -S minecraft -X eval "stuff \"save-off\"\015"
 screen -p 0 -S minecraft -X eval "stuff \"save-all\"\015"
 
@@ -39,12 +38,12 @@ tar -cvzf $backupDir/$serverNick-$DATE.tar.gz $minecraftDir/*
 
 sleep 5
 # Don't forget to take the server out of readonly mode.
-screen -p 0 -S minecraft -X eval "stuff \"say Setting auto save world on.\"\015"
+screen -p 0 -S minecraft -X eval "stuff \"say "$serverNick" backup system is Setting auto save world on.\"\015"
 screen -p 0 -S minecraft -X eval "stuff \"save-on\"\015"
 sleep 5
 # Wait a second for the gnu-screen to allow another stuffing and optionally alert users that the backup has been completed.
 sleep 1
-screen -p 0 -S minecraft -X eval "stuff \"say Backup has been completed.\"\015"
+screen -p 0 -S minecraft -X eval "stuff \"say "$serverNick" backup system has been completed.\"\015"
 
 # (Optionally) Remove all old (older than 3 days) backups to cut down on disk utilization. 
 find $backupDir* -mtime +3 -exec rm {} -fv \;
