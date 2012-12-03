@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Minecraft Script To List All Players
+# Minecraft Script Restart The Server
 # Author: Remko de Bruin <altogoten@gmail.com> 
 # Github: http://github.com/Goten87/linux-minecraft-scripts
 
-source config.cfg
+source ./config.cfg
 
 # Alert the players that the server is going to be shut down. We stuff the `stop` command into
 # the screen session. \015 is the escape value for a return.
@@ -35,14 +35,9 @@ screen -p 0 -S minecraft -X eval "stuff \"say "$serverNick" will be restarting i
 # Wait a moment and stop the server.
 sleep 1
 echo "Stopping "$serverNick"."
-./mc-stop.sh
-sleep 10
-./mc-start.sh
+screen -p 0 -S minecraft -X eval "stuff \"stop\"\015"
 
-sleep 5
-
-# Move into the minecraft directory.
-cd $minecraftDir
+sleep 15
 echo "Starting "$serverNick" up again."
-# Start the game in a GNU screen. It will detatch automatically.
-screen -dmS minecraft java -Xmx2048M -Xms2048M -jar $jar.jar nogui
+sleep 1
+./mc-start.sh
