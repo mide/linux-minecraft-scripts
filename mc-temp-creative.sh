@@ -12,7 +12,7 @@
 # (Note -NO- trailing slashes on paths)    #
 ############################################
 
-source config.cfg
+source ./config.cfg
 
 ############################################
 # End of settings; Do not modify below     #
