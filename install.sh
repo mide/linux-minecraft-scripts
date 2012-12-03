@@ -26,12 +26,6 @@ read -p " Give your backup dir path (directory containing, no trailing slash):
 # Where do you wish to store the backups (directory containing, no trailing slash)
 backupDir=$backupDir" >> ./config.cfg
 
-#Making The Minecraft Backup Time Config
-read -p " Give your cron time stamp: " backupTime
-	echo "
-#The time howlong it takes for your cron job to be run
-backupTime=$backupTime" >> ./config.cfg
-
 #Making The Minecraft Jar Config
 read -p " Give your server jar name (default minecraft_server): 
  " minecraftJar
