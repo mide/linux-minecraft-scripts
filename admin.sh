@@ -28,7 +28,7 @@ until [ "${option}" = "exit" ]; do
 	
 	if [ "${option,,}" = "auth" ]; then
 		./mc-auth.sh
-	elif [ "${option}" = "backup" ]; then
+	elif [ "${option,,}" = "backup" ]; then
 		clear
 		./mc-backup.sh
 	elif [ "${option,,}" = "chat" ]; then
