@@ -10,9 +10,16 @@
 ############################################
 
 #source /server/minecraft/cmd/config.cfg
+
+# Location of the minecraft_server.jar (directory containing, no trailing slash)
 minecraftDir="/server/minecraft/gotencraft"
-backupDir="/server/minecraft/backups"
-serverNick="GotenCraft" 
+
+# Where do you wish to store the backups (directory containing, no trailing slash)
+backupDir="/temp/exemple"
+
+# Do you have more than one server? What do you want to call this one?
+serverNick="YourServerName"
+ 
 ############################################
 # End of settings; Do not modify below     #
 ############################################
