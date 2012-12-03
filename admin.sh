@@ -26,33 +26,33 @@ until [ "${option}" = "exit" ]; do
 	
 	
 	
-	if [ "${option}" = "Auth" ]; then
+	if [ "${option}" = "Auth" ] || [ "${option}" = "auth" ]; then
 		./mc-auth.sh
-	elif [ "${option}" = "Backup" ]; then
+	elif [ "${option}" = "Backup" ] || [ "${option}" = "backup" ]; then
 		clear
 		./mc-backup.sh
-	elif [ "${option}" = "Chat" ]; then
+	elif [ "${option}" = "Chat" ] || [ "${option}" = "chat" ]; then
 		clear
 		./mc-chat.sh
-	elif [ "${option}" = "Players" ]; then
+	elif [ "${option}" = "Players" ] || [ "${option}" = "players" ]; then
 		clear
 		./mc-list-all-players.sh
-	elif [ "${option}" = "Start" ]; then
+	elif [ "${option}" = "Start" ] || [ "${option}" = "start" ]; then
 		clear
 		./mc-start.sh
-	elif [ "${option}" = "Restart" ]; then
+	elif [ "${option}" = "Restart" ] || [ "${option}" = "restart" ]; then
 		clear
 		./mc-restart.sh
-	elif [ "${option}" = "Stop" ]; then
+	elif [ "${option}" = "Stop" ] || [ "${option}" = "stop" ]; then
 		clear
 		./mc-stop.sh
-	elif [ "${option}" = "Creative" ]; then
+	elif [ "${option}" = "Creative" ] || [ "${option}" = "creative" ]; then
 		./mc-temp-creative.sh ${var1}
 	elif [ "${option}" = "Time" ]; then
 		clear
 		./mc-time.sh ${var1}
 	fi
-	
+	clear
 	echo " Thanks for using linux admin script for minecraft"
 
 done
