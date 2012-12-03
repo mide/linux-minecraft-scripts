@@ -9,6 +9,7 @@ source config.cfg
 clear
 until [ "${option}" = "exit" ]; do
 	echo
+	echo " Command 		- 	Function"
 	echo " Auth	- view all authentications to the server"
 	echo " Backup - Makes a backup of your server"
 	echo " Chat	- view live chatlog of players"
@@ -26,30 +27,30 @@ until [ "${option}" = "exit" ]; do
 	
 	
 	if [ "${option}" = "Auth" ]; then
-		./mc-auth
+		./mc-auth.sh
 	elif [ "${option}" = "Backup" ]; then
 		clear
-		./mc-backup
+		./mc-backup.sh
 	elif [ "${option}" = "Chat" ]; then
 		clear
-		./mc-chat
+		./mc-chat.sh
 	elif [ "${option}" = "Players" ]; then
 		clear
-		./mc-list-all-players
+		./mc-list-all-players.sh
 	elif [ "${option}" = "Start" ]; then
 		clear
-		./mc-start
+		./mc-start.sh
 	elif [ "${option}" = "Restart" ]; then
 		clear
-		./mc-restart
+		./mc-restart.sh
 	elif [ "${option}" = "Stop" ]; then
 		clear
-		./mc-stop
+		./mc-stop.sh
 	elif [ "${option}" = "Creative" ]; then
-		./mc-temp-creative ${var1}
+		./mc-temp-creative.sh ${var1}
 	elif [ "${option}" = "Time" ]; then
 		clear
-		./mc-time ${var1}
+		./mc-time.sh ${var1}
 	fi
 	
 	echo " Thanks for using linux admin script for minecraft"
